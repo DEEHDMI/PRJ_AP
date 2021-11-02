@@ -13,11 +13,11 @@
         <a href="?controller=index" class="navbar-brand">Communauté Lycée Pierre Poivre  <?php echo date("Y"); ?> </a>
         <ul class="navbar-nav">
             <?php //if(!empty($_SESSION['student'])): ?>
-                <li><a class="nav-link" href="?#">Personnels</a></li>
-                <li><a class="nav-link" href="?controller=student">Étudiants</a></li>
+                <li><a class="nav-link" href="?controller=student">Personnels</a></li>
+                <li><a class="nav-link" href="?controller=student&method=index">Étudiants</a></li>
                 <!--<li><a class="nav-link" href="?controller=security&method=logout">Déconnexion</a></li>-->
             <?php //else: ?>
-                <li><a class="nav-link" href="?controller=index&method=login">Connexion</a></li>
+              <!--  <li><a class="nav-link" href="?controller=index&method=login">Connexion</a></li>-->
             <?php// endif; ?>
         </ul>
     </nav>

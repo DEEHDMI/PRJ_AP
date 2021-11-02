@@ -1,7 +1,7 @@
 <?php
 
 class Student extends Database{
-    
+
     public function all(){
         $sql_etu = 'SELECT * FROM etudiant;';
             $rqt_etu = $this->cnx->prepare($sql_etu);
@@ -10,7 +10,4 @@ class Student extends Database{
             return $tab_etu;
     }
 }
-
-
-
 ?>
