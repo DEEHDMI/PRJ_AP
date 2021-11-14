@@ -16,8 +16,8 @@
                 <th>ID</th>
                 <th>Nom</th>
                 <th>Prenom</th>
-                <th>Profil</th>
                 <th>Classe</th>
+                <th>Statut</th>
             
         </thead>
    
@@ -27,13 +27,13 @@
             foreach($all_etu as $ligne){
 
                 echo '<tr>
-                    <td>'. $ligne->idEtudiant.' </td>
-                    <td>'.$ligne->nomEtudiant.'</td>
-                    <td>'.$ligne->pnomEtudiant.'</td>
-                    <td>'.$ligne->bio.'</td>
+                    <td>'. $ligne->idMembre.' </td>
+                    <td>'.$ligne->nomMembre.'</td>
+                    <td>'.$ligne->pnomMembre.'</td>
                     <td>'.$ligne->classe.'</td>
+                    <td>'.$ligne->statut.'</td>
                 </tr>';
-                }    
+                }      
             ?>      
         </tbody>
     </table>

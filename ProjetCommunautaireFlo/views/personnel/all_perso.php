@@ -16,7 +16,7 @@
                 <th>ID</th>
                 <th>Nom</th>
                 <th>Prenom</th>
-                <th>Profil</th>
+                <th>classe</th>
                 <th>Fonction</th>
             
         </thead>
@@ -27,11 +27,11 @@
             foreach($all_perso as $ligne){
 
                 echo '<tr>
-                    <td>'. $ligne->idPersonnel.' </td>
-                    <td>'.$ligne->nomPersonnel.'</td>
-                    <td>'.$ligne->pnomPersonnel.'</td>
-                    <td>'.$ligne->bio.'</td>
-                    <td>'.$ligne->fonction.'</td>
+                    <td>'. $ligne->idMembre.' </td>
+                    <td>'.$ligne->nomMembre.'</td>
+                    <td>'.$ligne->pnomMembre.'</td>
+                    <td>'.$ligne->classe.'</td>
+                    <td>'.$ligne->statut.'</td>
                 </tr>';
                 }    
             ?>      
