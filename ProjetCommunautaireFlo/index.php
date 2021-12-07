@@ -8,12 +8,14 @@ $method     = isset($_GET['method'])        ? $_GET['method']       : 'index';
 require_once "models/Database.php";
 require_once "models/Student.php";
 require_once "models/Personnel.php";
+require_once "models/user.php";
 
 require_once "views/layouts/header.php";
 
 require_once "controllers/indexController.php";
 require_once "controllers/studentController.php";
 require_once "controllers/personnelController.php";
+require_once "controllers/userController.php";
 
 /*
 $Controller = new indexController();

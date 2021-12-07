@@ -6,8 +6,8 @@ class indexController{
 
     public function __construct()
     {
-      include_once("models/loginModels.php");
-      $this->loginModel = new loginModels();
+      include_once("models/user.php");
+      $this->loginModel = new user();
       $cnx=$this->loginModel->connect();
     }
 

@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste</title>
-</head>
-<body>
+<div class="body_light">
+<button class="btn">Light/Dark</button>
+<script src="./assets/js/darkMode.js"></script>
+</br>
+</br>
+</br>
+
+
 
 <h1>Liste des étudiants</h1>
 
-    <table>
+    <table class="table">
+
+    
         <thead>
             
                 <th>ID</th>
@@ -38,6 +39,4 @@
         </tbody>
     </table>
 
-
-</body>
-</html>
+            </div>

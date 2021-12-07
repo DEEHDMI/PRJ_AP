@@ -17,6 +17,11 @@ class studentController{
         
     }
 
+    public function etu(){
+        $etu = $this->modeleStudent->find_student();
+        require_once 'views/student/all_etu.php';  
+    }
+
 }
 
 ?>
