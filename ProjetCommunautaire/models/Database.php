@@ -13,7 +13,7 @@ Class Database {
     public function __construct(){
         $this->host   = "localhost";
         $this->port   = 3306;
-        $this->dbname = "projetcommunautaire";
+        $this->dbname = "projet_communautaire";
         $this->user   = "root";
         $this->passwd = "";
         $this->cnx = null;

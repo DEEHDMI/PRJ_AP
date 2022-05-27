@@ -1,0 +1,311 @@
+/**
+   styles
+ */
+@charset "UTF-8";
+
+
+:root{
+    --primary: #3f8359;
+    --secondary: #51868C;
+    --third: #F27D52;
+    --bg: #F2EDD0;
+    --green: #2ad573;
+    --red: #ff5640;
+    --black: #505050;
+}
+
+/**
+    Importer la police
+ */
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: bold;
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+/**
+    Resets css
+ */
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    transition: .4s all ease;
+    word-break: break-word;
+    /*color: var(--black);*/
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/**
+    Style général
+ */
+html{
+    scroll-behavior: smooth;
+}
+
+.body_light{
+    background-color: white;
+	margin: 0;
+	color: black;
+
+}
+.body_dark{
+    background-color: #212121e3;
+	margin: 0;
+    padding:0;
+    width: 100%;
+	color: rgb(204, 204, 204);
+    padding-bottom: 100%;
+    
+
+}
+
+
+.container, .navbar{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+/**
+    Styles de la navigation (navbar)
+ */
+.navbar{
+    margin-bottom: 30px;
+    width: 100%;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand{
+    color: #ffff;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.navbar-nav{
+    display: flex;
+    margin-left: auto;
+}
+
+.navbar-nav li{
+    padding: 20px;
+}
+
+.nav-link{
+    color: #FFF;
+    opacity: .7;
+    position: relative;
+}
+
+    .nav-link::after{
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background: #fff;
+        left: 100%;
+        bottom: -4px;
+        transition: .5s ease;
+    }
+
+    .nav-link:hover{
+        opacity: 1;
+    }
+
+        .nav-link:hover::after{
+            width: 100%;
+            left: 0;
+            transition: .5s ease;
+        }
+
+/**
+    Styles des polices
+ */
+
+h1, h2, h3{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h1{
+    color: var(--primary);
+}
+
+
+/**
+    Style des boutons
+ */
+
+.btn{
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #fff;
+    background: var(--primary);
+    cursor: pointer;
+}
+
+    .btn:hover{
+        transform: translateY(-1px);
+        box-shadow: 0 5px 5px #00000014;
+    }
+    
+    .btn-green{
+        color: #fff;
+        background-color: var(--green);
+    }
+
+    .btn-outline-green{
+        border: 1px solid var(--green);
+        color: var(--green);
+        background: transparent;
+    }
+
+    .btn-outline-green:hover{
+        border: 1px solid var(--green);
+        color: #fff;
+        background: var(--green);
+    }
+
+    .btn-outline-red{
+        background: transparent;
+        border: transparent;
+        color: var(--red);
+    }
+
+
+
+/**
+    Style général pour les tableaux
+ */
+
+.table{
+    width: 70%;
+    max-width: 800px;
+    margin-left: 10px;
+    border-collapse: collapse;
+    background: rgb(233, 230, 230);
+}
+
+    .table td, .table thead th{
+        padding: 10px 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+    }
+
+    .table thead th{
+        color: var(--secondary);
+        text-transform: uppercase;
+    }
+
+    .table tbody tr:hover{
+        background: rgba(0, 0, 0, 0.11);
+    }
+    
+    .table__options{
+        text-align: right;
+    }
+
+
+.panel{
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    padding: 30px;
+    box-shadow: 0 5px 5px black;
+    background-image: url("http://127.0.0.1:8080/cybersecurite/BTS2/SiteWeb/assets/imgs/lppsmall.jpg");
+    
+}
+    .panel:hover{
+        transform: translateY(-5px);
+    }
+
+.panel p h1{
+    color: aqua;
+}
+
+
+/**
+    Styles pour les formulaires
+ */
+.form-group{
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin: 10px 0;
+    
+}
+
+
+.form-group label{
+    position: absolute;
+    left: 5px;
+    top: -2px;
+    padding: 0 5px;
+    background: #fff;
+    color: var(--black);
+    font-size: 12px;
+}
+
+.form-control{
+    border: 1px solid #00000059;
+    border-bottom: 2px solid var(--secondary);
+    padding: 14px 8px;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.form-control:focus{
+    border: 2px solid var(--secondary);
+}
+
+/**
+    Style pour la connexion
+ */
+
+.login-form{
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 30px;
+    box-shadow: 0 4px 5px #0000003d;
+}
+
+.register-form{
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 30px;
+   
+    box-shadow: 0 4px 5px #0000003d;
+}
+
+.imglogin {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+
+/* footer en bas de page */
+
+.erreur{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.erreur h1{
+    font-size: 50px;
+    display: inline-block;
+    padding-right: 12px;
+    animation: type .5s alternate infinite;
+}

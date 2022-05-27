@@ -1,8 +1,9 @@
 <?php
 
-class studentController extends Student{
+class studentController{
     public $modeleStudent;
 
+    
     public function __construct()
         {
           include_once("models/Student.php");
@@ -16,41 +17,10 @@ class studentController extends Student{
         
     }
 
-
-    //login Etudiants
-    /*public function Etu(){      
-        if(isset($_POST['formconnect'])){
-             //On recupere le login et le mot de passe
-             $login = htmlspecialchars($_POST['loginuser']);
-             $password = htmlspecialchars($_POST['mdpuser']);
-
-            //condition pour se connecter en tant etudiant
-            if(!empty($login) && !empty($password)){
-                $logEtu = $this->modeleStudent->logModelEtu();
-                require_once '/login/login.php';
-            }
-        }          
-    }*/
-
-
-    public function Etu(){
-        $logEtu = $this->modeleStudent->logModelEtu();
-        if($logEtu == 'login'){
-            require_once 'views/login/login.php';
-        }
-
-        else{
-            require_once 'views/login/login.php';
-        }
+    public function etu(){
+        $etu = $this->modeleStudent->find_student();
+        require_once 'views/student/all_etu.php';  
     }
-
-    //login Personnels
-
-    //login Admin
-
-
-
-
 
 }
 
